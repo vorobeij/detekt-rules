@@ -3,7 +3,6 @@ package ru.vorobeij.detekt
 import io.gitlab.arturbosch.detekt.api.Config
 import io.gitlab.arturbosch.detekt.api.RuleSet
 import io.gitlab.arturbosch.detekt.api.RuleSetProvider
-import ru.vorobeij.detekt.rules.MyRule
 import ru.vorobeij.detekt.rules.sort.SortRule
 
 class VorobeijRuleSetProvider : RuleSetProvider {
@@ -14,7 +13,6 @@ class VorobeijRuleSetProvider : RuleSetProvider {
         return RuleSet(
             ruleSetId,
             listOf(
-                MyRule(config),
                 SortRule(config),
             ),
         )
