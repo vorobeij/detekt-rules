@@ -1,0 +1,6 @@
+MyRuleSet:
+  MyRule:
+    active: true
+  SortRule:
+    active: true
+    autoCorrect: true
