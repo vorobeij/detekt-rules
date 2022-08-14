@@ -19,6 +19,7 @@ dependencies {
 
     val ktlint = "0.46.1"
     implementation("com.pinterest.ktlint:ktlint-core:${ktlint}")
+    implementation("com.pinterest.ktlint:ktlint-ruleset-standard:${ktlint}")
     testImplementation("com.pinterest.ktlint:ktlint-test:${ktlint}")
 
     testImplementation("io.gitlab.arturbosch.detekt:detekt-test:1.21.0")
