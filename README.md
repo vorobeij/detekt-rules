@@ -1,3 +1,5 @@
+[![](https://jitpack.io/v/vorobeij/detekt-rules.svg)](https://jitpack.io/#vorobeij/detekt-rules)
+
 > Based on https://detekt.dev gradle plugin
 
 # Setup

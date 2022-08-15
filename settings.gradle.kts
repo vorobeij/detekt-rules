@@ -1,1 +1,3 @@
-rootProject.name = "detekt-custom-rule"
+enableFeaturePreview("VERSION_CATALOGS")
+
+rootProject.name = "detekt-ruleset-vorobeij"
