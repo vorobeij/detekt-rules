@@ -6,7 +6,7 @@ import org.jetbrains.kotlin.com.intellij.psi.impl.source.tree.PsiWhiteSpaceImpl
 import org.jetbrains.kotlin.lexer.KtTokens
 import org.jetbrains.kotlin.psi.stubs.elements.KtStubElementTypes
 
-class SortFormatRule : Rule("kotlin-sort") {
+class SortFormatRule : Rule("SortRule") {
 
     private val sorter = Sorter()
 
@@ -16,6 +16,7 @@ class SortFormatRule : Rule("kotlin-sort") {
         emit: (offset: Int, errorMessage: String, canBeAutoCorrected: Boolean) -> Unit
     ) {
 
+        println("sorting rule debug... autoCorrect = $autoCorrect")
         if (node.elementType == KtStubElementTypes.CLASS_BODY) {
             val children: Array<ASTNode> = node.getChildren(null)
             val innerElements: List<ASTNode> = children.filteredInnerElements()
@@ -25,7 +26,9 @@ class SortFormatRule : Rule("kotlin-sort") {
 
                 emit(node.startOffset, "Incorrect order of inners", true)
 
-                autocorrect(node, innerElements, sortedInnerElements)
+                if (autoCorrect) {
+                    autocorrect(node, innerElements, sortedInnerElements)
+                }
             }
         }
     }
