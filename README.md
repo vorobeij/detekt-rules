@@ -4,29 +4,51 @@
 
 # Setup
 
+Add it in your root build.gradle at the end of repositories:
+```kotlin
+allprojects {
+    repositories {
+        // ...
+        maven(url = "https://jitpack.io")
+    }
+}
+```
+
+```kotlin
+dependencies {
+    implementation("com.github.vorobeij:detekt-rules:$detekt_vorobeij_ruleset")
+}
+```
+
 Root build.gradle.kts
+
 ```kotlin
 classpath "io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.18.1"
-apply plugin: "io.gitlab.arturbosch.detekt"
+apply plugin : "io.gitlab.arturbosch.detekt"
 ```
 
 Module's build.gradle.kts
+
 ```kotlin
-apply plugin: "io.gitlab.arturbosch.detekt"
+apply plugin : "io.gitlab.arturbosch.detekt"
 
 detekt "io.gitlab.arturbosch.detekt:detekt-cli:1.17.1"
-detekt project(":customRules")
+detekt project (":customRules")
 ```
 
 ## Config file
+
 `config.yml`
 
 ## Gradle tasks
+
 - detekt
 - detektFormat
 
 ## Autoformatting for non committed changes
+
 ktlint.gradle.kts
+
 ```kotlin
 val ktlint: Configuration by configurations.creating
 val outputDir = "${project.buildDir}/reports/ktlint/"
