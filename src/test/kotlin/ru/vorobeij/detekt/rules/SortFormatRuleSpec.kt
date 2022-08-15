@@ -2,7 +2,6 @@ package ru.vorobeij.detekt.rules
 
 import io.gitlab.arturbosch.detekt.test.yamlConfig
 import org.junit.jupiter.api.Test
-import ru.vorobeij.detekt.config.FormatAllConfig
 import ru.vorobeij.detekt.rules.sort.SortRule
 import ru.vorobeij.detekt.utils.formatAndCompare
 import ru.vorobeij.detekt.utils.loadFileContent

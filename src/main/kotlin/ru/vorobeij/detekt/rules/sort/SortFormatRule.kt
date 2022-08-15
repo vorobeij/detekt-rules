@@ -25,9 +25,7 @@ class SortFormatRule : Rule("kotlin-sort") {
 
                 emit(node.startOffset, "Incorrect order of inners", true)
 
-                if (autoCorrect) {
-                    autocorrect(node, innerElements, sortedInnerElements)
-                }
+                autocorrect(node, innerElements, sortedInnerElements)
             }
         }
     }

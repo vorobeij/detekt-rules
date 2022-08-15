@@ -1,10 +1,7 @@
 formatting:
-  autoCorrect: true
   active: true
 
 rules-vorobeij:
   active: true
-  autoCorrect: true
   SortRule:
     active: true
-    autoCorrect: true
