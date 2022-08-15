@@ -6,7 +6,7 @@ import io.gitlab.arturbosch.detekt.api.RuleSetProvider
 
 class VorobeijRuleSetProvider : RuleSetProvider {
 
-    override val ruleSetId: String = "VorobeijRuleSet"
+    override val ruleSetId: String = "rules-vorobeij"
 
     override fun instance(config: Config): RuleSet {
         return RuleSet(
@@ -15,7 +15,7 @@ class VorobeijRuleSetProvider : RuleSetProvider {
                 *customRules(config),
                 *standardRules(config),
                 *experimentalRules(config)
-            ),
+            )
         )
     }
 }

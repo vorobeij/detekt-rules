@@ -79,8 +79,8 @@ class Sorter {
         KtStubElementTypes.PRIMARY_CONSTRUCTOR,
         KtStubElementTypes.SECONDARY_CONSTRUCTOR,
         KtStubElementTypes.CLASS_INITIALIZER,
-        KtStubElementTypes.CLASS,
-        KtStubElementTypes.FUNCTION
+        KtStubElementTypes.FUNCTION,
+        KtStubElementTypes.CLASS
     )
 
     private val modifiersOrder = listOf(

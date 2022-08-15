@@ -1,4 +1,4 @@
-MyRuleSet:
+rules-vorobeij:
   autoCorrect: true
   formatting:
     active: true

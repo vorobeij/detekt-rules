@@ -1,4 +1,4 @@
-package com.swift.android.ktlint
+package ru.vorobeij.android
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -65,6 +65,10 @@ class BrowserFragment(
 
     constructor() : this(0)
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
+
     inner class SomeClass() {
         companion object {
 
@@ -77,10 +81,6 @@ class BrowserFragment(
                 this.arguments = screenState.arguments
             }
         }
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
     }
 }
 

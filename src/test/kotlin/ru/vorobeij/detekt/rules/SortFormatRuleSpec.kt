@@ -1,5 +1,6 @@
 package ru.vorobeij.detekt.rules
 
+import io.gitlab.arturbosch.detekt.test.yamlConfig
 import org.junit.jupiter.api.Test
 import ru.vorobeij.detekt.config.FormatAllConfig
 import ru.vorobeij.detekt.rules.sort.SortRule
@@ -10,9 +11,10 @@ class SortFormatRuleSpec {
 
     @Test
     fun `should sort file contents`() {
-        SortRule(FormatAllConfig()).formatAndCompare(
-            input = loadFileContent("sort/input.kt"),
-            expected = loadFileContent("sort/output.kt")
+        val config = yamlConfig("config/config.yml")
+        SortRule(config).formatAndCompare(
+            input = loadFileContent("sort/input.txt"),
+            expected = loadFileContent("sort/output.txt")
         )
     }
 }

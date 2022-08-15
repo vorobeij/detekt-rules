@@ -8,7 +8,6 @@ Add it in your root build.gradle at the end of repositories:
 ```kotlin
 allprojects {
     repositories {
-        // ...
         maven(url = "https://jitpack.io")
     }
 }
@@ -16,7 +15,7 @@ allprojects {
 
 ```kotlin
 dependencies {
-    implementation("com.github.vorobeij:detekt-rules:$detekt_vorobeij_ruleset")
+    implementation("com.github.vorobeij:detekt-rules:master-SNAPSHOT")
 }
 ```
 
