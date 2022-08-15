@@ -6,7 +6,7 @@ import org.jetbrains.kotlin.com.intellij.psi.impl.source.tree.PsiWhiteSpaceImpl
 import org.jetbrains.kotlin.lexer.KtTokens
 import org.jetbrains.kotlin.psi.stubs.elements.KtStubElementTypes
 
-class SortFormatRule : Rule("SortRule") {
+class SortFormatRule : Rule("sort-rule") {
 
     private val sorter = Sorter()
 
